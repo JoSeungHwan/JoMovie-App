@@ -89,7 +89,7 @@ export const searchMovies = async (page: number) => {
     store.state.loading = false;
   }
 };
-export async function getMovieDetails(id: string) {
+export const getMovieDetails = async (id: string) => {
   try {
     // const res = await fetch(
     //   `https://www.omdbapi.com?apikey=cbd5a80f&i=${id}&plot=full`
@@ -104,7 +104,7 @@ export async function getMovieDetails(id: string) {
   } catch (error) {
     console.log('searchMovieDetails error:', error);
   }
-}
+};
 
 // import { Store } from '../core/jo';
 
