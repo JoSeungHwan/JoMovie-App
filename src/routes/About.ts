@@ -3,7 +3,7 @@ import aboutStore from '../store/about';
 
 export default class About extends Component {
   render() {
-    const { photo, name, email, github, blog } = aboutStore.state;
+    const { photo, name, email, github, Notion } = aboutStore.state;
 
     this.el.classList.add('container', 'about');
     this.el.innerHTML = /* html */ `
@@ -17,7 +17,7 @@ export default class About extends Component {
         </a>
       </p>
       <p><a href="${github}" target="_blank">GitHub</a></p>
-      <p><a href="${blog}" target="_blank">Blog</a></p>
+      <p><a href="${Notion}" target="_blank">Notion</a></p>
     `;
   }
 }
