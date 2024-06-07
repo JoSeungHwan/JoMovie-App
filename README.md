@@ -14,12 +14,6 @@ $ npm i -D vercel@latest
 
 새롭게 추가할 OpenAI API Key 환경변수와 구분하기 위해, 기존의 `APIKEY` 환경변수의 이름을 `OMDB_API_KEY`로 변경했습니다.
 
-`node-fetch` 패키지가 3버전으로 업데이트되면서, 타입스크립트를 내장하는 것으로 변경되었습니다.  
-따라서 강의에서 소개하는 `@types/node-fetch` 패키지는 설치하지 않아도 됩니다.
-
-Vercel Serverless Functions가 정상적으로 동작하기 위해 `package.json` 파일의 `type` 옵션을 요구하게 되었습니다.  
-`package.json` 파일에 다음과 같이 `"type": "module"` 옵션을 추가하세요.
-
 ```json
 {
   "type": "module"
@@ -185,29 +179,4 @@ $ npm i -D typescript
   },
   "include": ["src/**/*.ts", "api/**/*.ts"]
 }
-```
-
-### JS 프로젝트가 없는 경우
-
-타입스크립트를 시작할 기존의 JS 프로젝트를 가지고 있지 않다면, 다음과 같이 진행하세요!  
-진행이 끝나면, 루트 경로에 `.env` 파일을 생성하고 `OMDB_API_KEY` 환경변수를 지정해야 합니다!
-
-```bash
-# 원하는 터미널 경로에서 완성된 프로젝트를 클론합니다.
-$ git clone https://github.com/ParkYoungWoong/vanillajs-movie-app.git
-
-# 클론한 프로젝트 폴더로 이동합니다.
-$ cd vanillajs-movie-app
-
-# 브랜치를 변경합니다.
-$ git checkout typescript_starter
-
-# Git 버전 관리 내역을 초기화합니다.
-## macOS
-$ rm -rf .git
-## Windows
-$ rmdir /s /q .git
-
-# NPM 패키지를 설치합니다.
-$ npm i
 ```
